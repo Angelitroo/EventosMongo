@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
-import java.util.Date;
 
 @Service
 public class EventoService {
@@ -21,7 +20,7 @@ public class EventoService {
         return eventoRepository.findByNombreContainingIgnoreCase(nombre);
     }
 
-    public List<Evento> buscarEventosPorFecha(Date fecha) {
+    public List<Evento> buscarEventosPorFecha(long fecha) {
         return eventoRepository.findByFecha(fecha);
     }
 
